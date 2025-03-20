@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --lightest: 0 0% 95%;
+    --lighter: 0 0% 85%;
+    --light: 0 0% 70%;
+    --between: 0 0% 50%;
+    --dark: 0 0% 30%;
+    --darker: 0 0% 20%;
+    --darkest: 0 0% 5%;
+
+    --primary: 221 96% 33%;
+    --secondary: 200 100% 40%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --lightest: 0 0% 5%;
+    --lighter: 0 0% 15%;
+    --light: 0 0% 30%;
+    --dark: 0 0% 70%;
+    --darker: 0 0% 80%;
+    --darkest: 0 0% 95%;
+
+    --primary: 221 96% 31%;
+    --secondary: 200 100% 43%;
+  }
+}
+@layer base {
+  * {
+    @apply border-lighter select-none;
+  }
+  body {
+    @apply bg-lightest text-dark text-sm lg:text-base antialiased;
+  }
+}
+
+@layer components{
+  
+  .padding {
+    @apply px-2 md:px-4 lg:px-8;
+  }
+
+  .width {
+    @apply w-full max-w-[95rem] mx-auto padding;
+  }
+  .first-orbit {
+    @apply size-[27rem] sm:size-[30rem] md:size-[40rem] lg:size-[50rem] xl:size-[60rem] rounded-full;
+  }
+  .second-orbit {
+    @apply size-[37rem] sm:size-[40rem] md:size-[50rem] lg:size-[60rem] xl:size-[70rem] rounded-full;
+  }
+  .third-orbit {
+    @apply size-[47rem] sm:size-[50rem] md:size-[60rem] lg:size-[70rem] xl:size-[80rem] rounded-full;
+  }
+  .fourth-orbit {
+    @apply size-[57rem] sm:size-[60rem] md:size-[70rem] lg:size-[80rem] xl:size-[90rem] rounded-full;
+  }
+  .twelve {
+    @apply absolute top-0 right-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full;
+  }
+  .three {
+    @apply absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 rounded-full;
+  }
+  .six {
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-full;
+  }
+  .nine {
+    @apply absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full;
+  }
+  .animated {
+    @apply transition-all duration-500;
+  }
+  .blured {
+    @apply grayscale-[0.7] blur-[2px] animated;
+  }
+}
