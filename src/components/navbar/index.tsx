@@ -158,7 +158,7 @@ const LinkItem = ({ link, setPosition, pathname }: TLinkItem) => {
       className={cn(
         "block h-9 px-4 py-2 rounded text-lightest dark:text-darkest z-10 font-medium relative",
         pathname === link.href
-          ? " text-red-500  underline decoration-1 underline-offset-2"
+          ? " text-red-500 dark:text-red-500  underline decoration-1 underline-offset-2"
           : "mix-blend-difference"
       )}
     >
